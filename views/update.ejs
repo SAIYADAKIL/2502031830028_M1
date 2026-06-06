@@ -1,0 +1,54 @@
+<%- include('partials/header.ejs') %>
+
+<main class="container py-5">
+  <div class="card shadow border-0">
+    <div class="card-body p-4">
+      <h2 class="fw-bold mb-4">Update Student</h2>
+
+      <form action="/update/<%= student._id %>" method="POST">
+        <div class="mb-3">
+          <label class="form-label">Student Name</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            value="<%= student.name %>"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            value="<%= student.email %>"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Course</label>
+          <input
+            type="text"
+            name="course"
+            class="form-control"
+            value="<%= student.course %>"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-success">
+          Update Student
+        </button>
+
+        <a href="/show" class="btn btn-outline-dark">
+          Back
+        </a>
+      </form>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

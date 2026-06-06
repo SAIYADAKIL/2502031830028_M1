@@ -1,0 +1,108 @@
+<%- include('partials/header.ejs') %>
+
+<main class="py-5">
+  <section class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-md-7">
+        <h1 class="display-5 fw-bold mb-3">
+          Welcome to CRUD Management System
+        </h1>
+
+        <p class="lead text-muted mb-4">
+          Manage records easily using Add, Show, Update and Delete pages.
+          This project is built with Node.js, Express.js and EJS.
+        </p>
+
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="/add" class="btn btn-primary px-4">
+            Add Record
+          </a>
+
+          <a href="/show" class="btn btn-outline-dark px-4">
+            View Records
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-5 mt-5 mt-md-0">
+        <div class="card shadow border-0">
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-3">Project Pages</h4>
+
+            <div class="list-group">
+              <a href="/" class="list-group-item list-group-item-action active">
+                Home Page
+              </a>
+
+              <a href="/add" class="list-group-item list-group-item-action">
+                Add Page
+              </a>
+
+              <a href="/show" class="list-group-item list-group-item-action">
+                Show Page
+              </a>
+
+              <a href="/update" class="list-group-item list-group-item-action">
+                Update Page
+              </a>
+
+              <a href="/delete" class="list-group-item list-group-item-action">
+                Delete Page
+              </a>
+
+              <a href="/contact" class="list-group-item list-group-item-action">
+                Contact Page
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container mt-5">
+    <div class="row g-4">
+
+      <div class="col-md-3">
+        <div class="card text-center shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h3 class="fw-bold">01</h3>
+            <p class="text-muted mb-0">Add Data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card text-center shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h3 class="fw-bold">02</h3>
+            <p class="text-muted mb-0">Show Data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card text-center shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h3 class="fw-bold">03</h3>
+            <p class="text-muted mb-0">Update Data</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card text-center shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h3 class="fw-bold">04</h3>
+            <p class="text-muted mb-0">Delete Data</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer.ejs') %>

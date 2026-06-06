@@ -1,0 +1,62 @@
+<%- include('partials/header.ejs') %>
+
+<main class="container py-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold">Student Records</h2>
+
+    <a href="/add" class="btn btn-primary">
+      Add Student
+    </a>
+  </div>
+
+  <div class="card shadow border-0">
+    <div class="card-body">
+      <table class="table table-bordered table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if (students.length > 0) { %>
+            <% students.forEach((student, index) => { %>
+              <tr>
+                <td><%= index + 1 %></td>
+                <td><%= student.name %></td>
+                <td><%= student.email %></td>
+                <td><%= student.course %></td>
+
+                <td>
+                  <a href="/edit/<%= student._id %>" class="btn btn-warning btn-sm">
+                    Edit
+                  </a>
+
+                  <a
+                    href="/delete/<%= student._id %>"
+                    class="btn btn-danger btn-sm"
+                    onclick="return confirm('Are you sure you want to delete this student?')"
+                  >
+                    Delete
+                  </a>
+                </td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr>
+              <td colspan="5" class="text-center text-muted">
+                No student records found
+              </td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer.ejs') %>
