@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 7 - Student Registration Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Student Registration Dashboard</h1>
+      <p>Mini project using HTML, CSS, JavaScript, DOM and LocalStorage.</p>
+    </header>
+
+    <section class="form-section">
+      <form id="studentForm">
+        <div class="form-group">
+          <label for="name">Student Name</label>
+          <input type="text" id="name" placeholder="Enter student name" />
+          <small id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter email" />
+          <small id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="course">Course</label>
+          <select id="course">
+            <option value="">Select course</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Bootstrap">Bootstrap</option>
+          </select>
+          <small id="courseError"></small>
+        </div>
+
+        <button type="submit">Add Student</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Registered Students</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
