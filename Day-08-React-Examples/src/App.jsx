@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header.jsx';
 import Counter from './components/Counter.jsx';
 import ProductList from './components/ProductList.jsx';
-import StudentCard from './components/StudentCard.jsx';
+import ProfileCard from './components/ProfileCard.jsx';
 
 function App() {
   const [page, setPage] = useState('home');
@@ -14,8 +14,8 @@ function App() {
       <nav className="nav">
         <button onClick={() => setPage('home')}>Home</button>
         <button onClick={() => setPage('counter')}>Counter</button>
-        <button onClick={() => setPage('products')}>Products</button>
-        <button onClick={() => setPage('student')}>Student</button>
+        <button onClick={() => setPage('products')}>List</button>
+        <button onClick={() => setPage('profile')}>Profile</button>
       </nav>
 
       {page === 'home' && (
@@ -27,8 +27,8 @@ function App() {
 
       {page === 'counter' && <Counter />}
       {page === 'products' && <ProductList />}
-      {page === 'student' && (
-        <StudentCard name="Akil Saiyad" course="Web Development" city="Ahmedabad" />
+      {page === 'profile' && (
+        <ProfileCard name="Akil Saiyad" course="Web Development" location="Ahmedabad" />
       )}
     </div>
   );
